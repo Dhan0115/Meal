@@ -1,0 +1,184 @@
+:root {
+    --padding: 25px;
+    --borderTop: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+}
+
+.header{
+    margin-top: 80px;
+    padding-left: var(--padding);
+    margin-bottom: 50px;
+
+}
+
+.navigation{
+    padding: 0px var(--padding);
+    margin-bottom: 50px;
+}
+
+.navigation .navigation_list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 40px;
+}
+
+.navigation_list .navigation_item{
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-gap: 10px;
+    text-align: center;
+    transition: opacity 0.1s linear;
+}
+
+.navigation_item .item_icon {
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    transition: box-shadow 0.2s linear;
+    cursor: pointer;
+}
+
+.navigation_list:hover .navigation_item {
+    opacity: 0.5;
+}
+
+.navigation_list .navigation_item:hover{
+    opacity: 1;
+}
+
+.navigation_list .navigation_item:hover .item_icon {
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.item_icon .icon_emoji{
+    font-size: 20px;
+}
+
+.navigation_item .item_text {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.featured {
+    padding: var(--padding);
+    padding-top: 25px;
+    border-top: var(--borderTop);
+}
+
+.featured .featured_title{
+    margin-bottom: 20px;
+    margin: 0px;
+    font-size: 18px;
+}
+
+.featured .featured_wrapper {
+    display: grid;
+    grid-auto-columns: minmax(200px, 1fr);;
+    grid-auto-flow: column;
+    grid-gap: 30px;
+    overflow: scroll;
+    padding-bottom: 20px; 
+}
+
+.featured-meal{
+    height: 150px;
+    background: red;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    color: white;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center center;
+}
+
+.featured-meal:first-child {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://i.pinimg.com/564x/bd/5f/e4/bd5fe4bc19099228c2a08940ab90be05.jpg);
+    
+}
+
+.featured-meal:last-child {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://i.pinimg.com/564x/d1/49/74/d149743f906bb37593577338f8f00d82.jpg);
+    
+}
+
+.featured-meal:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://i.pinimg.com/564x/1a/ac/c9/1aacc9598dd02d7fd1a429293750f101.jpg);
+    
+}
+
+.featured-meal:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://i.pinimg.com/564x/eb/0b/b6/eb0bb6c39f6d38e6407233c8a69601f5.jpg);
+    
+}
+
+.featured-meal:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://i.pinimg.com/564x/e6/7c/b8/e67cb85a2c7800c6ea738c7a1df7d543.jpg);
+    
+}
+
+.featured-meal:nth-child(5) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://i.pinimg.com/564x/7c/9b/5e/7c9b5ec71c2dab2aca120081f9e8115f.jpg);
+    
+}
+
+.featured-meal_title {
+    margin-right: 10px;
+}
+
+.featured-meal_button{
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.recipes{
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: var(--borderTop);
+}
+
+.recipes_list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: var(--padding);
+}
+
+.recipes_list .recipe:nth-child(odd) {
+    background-color: white;
+}
+
+.recipes_list .recipe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px var(--padding);
+}
